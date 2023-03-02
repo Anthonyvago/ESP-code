@@ -1,0 +1,19 @@
+Wat ik heb geleerd:
+
+08-02 (SM-Business - wo):
+	Business Case: Presentatie van het resultaat van het idee wat jij hebt voor het bedrijf.
+	Business Model: Zowel interne- als externe factoren worden meegenomen om het bedrijf in kaart te brengen.
+	
+13-02 (SM-Technology - ma):
+	3D-printing: Het printen zelf wordt laagje voor laagje uitgevoerd.
+	SolidWorks: Bakje ontworpen waar de opdracht van Smart Connection zich in gaat bevinden.
+	
+13-02 (SM-Connection - ma):
+	Het is mogelijk om door middel van verschillende meettechnieken, een plant in de echte wereld te visualiseren
+	door pointclouds (hele grote hoeveelheden aan punten) te gebruiken die zijn voortgekomen uit deze meettechnieken.
+
+15-02 (? - woe (kookcursus) ):
+	Geen kookervaring, vaak te bang om iets te doen = nergens voor nodig. In een team samenwerken met verschillende soorten mensen
+
+02-03 (SM-Technology - do):
+	Radiosignalen en deze onderscheppen met een ontvanger waarmee vervolgens deze signalen gemocked kunnen worden.
