@@ -39,7 +39,7 @@ Point deviceStatus("devices");
 void setup()
 {
     // Serial is always good to use for debugging!
-    Serial.begin(9600);
+    Serial.begin(115200);
 
     // Setup wifi
     WiFi.mode(WIFI_STA);
