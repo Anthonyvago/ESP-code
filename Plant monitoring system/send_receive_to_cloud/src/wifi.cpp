@@ -5,8 +5,8 @@
 // Wi-Fi and Influx settings
 WiFiMulti wifiMulti;
 
-const char *WIFI_SSID = "enige echte enge windows laptop";
-const char *WIFI_PASSWORD = "appelbanaan";
+const char *WIFI_SSID = "TP Link slaapkamer Anthony";
+const char *WIFI_PASSWORD = "alexandra02";
 
 void wifiSetup()
 {
