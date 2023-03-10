@@ -33,7 +33,7 @@ void convert_analog_light_value_to_string(char *buff)
     // Convert the analog value to a string value
     if (analog_light_value < 40)
         strcpy(buff, "Dark");
-    else if (analog_light_value < 800)
+    else if (analog_light_value < 1000)
         strcpy(buff, "Dim");
     else if (analog_light_value < 2000)
         strcpy(buff, "Light");
