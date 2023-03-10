@@ -1,7 +1,6 @@
 #include <Arduino.h>
-
 #include <PrintStream.h>
-#include "switchKaKu.h"
+#include <switchKaKu.h>
 
 void set_rf_transmitter(bool state);
 

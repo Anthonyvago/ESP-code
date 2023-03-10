@@ -21,6 +21,16 @@ InfluxDBClient client(INFLUXDB_URL, INFLUXDB_ORG, INFLUXDB_BUCKET,
 // Point object called deviceStatus with measurment name "devices"
 Point deviceStatus("Wifi SSID's");
 
+const int nFields = 7;
+const char fields[nFields][14] = {
+    "internal_temp",
+    "wifi_strength",
+    "uptime",
+    "light",
+    "temperature",
+    "humidity",
+    "moisture"};
+
 void sendToInfluxDb()
 {
     // Write point to InfluxDB
@@ -36,7 +46,7 @@ void sendToInfluxDb()
     }
 }
 
-void setFieldsInObject(int nFields, char *fields[], int64_t values[])
+void setFieldsInObject(int32_t values[])
 {
     for (int i = 0; i < nFields; i++)
         deviceStatus.addField(fields[i], values[i]);

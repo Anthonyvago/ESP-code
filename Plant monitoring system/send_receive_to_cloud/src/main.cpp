@@ -1,14 +1,15 @@
 #include <Arduino.h>
 #include <math.h>
 
+#include <PrintStream.h>
+
 #include "wifi.hpp"
 #include "influxDb.hpp"
 #include "dht11.hpp"
 #include "moisture_sensor.hpp"
 #include "rf_transmitter.hpp"
 #include "water_pump_relais.hpp"
-
-#include "PrintStream.h"
+#include "light_sensor.hpp"
 
 #ifdef __cplusplus
 extern "C"
@@ -25,12 +26,15 @@ void setup()
   // Serial is always good to use for debugging!
   Serial.begin(115200);
 
+  // Setup the wifi
   wifiSetup();
   wifiConnect();
 
+  // Setup the influxDb
   setupInfluxDb();
   connectToInfluxDb();
 
+  // Setup the sensors
   setup_dht11();
   setup_water_pump_relais();
 }
@@ -59,27 +63,21 @@ void doLoop()
 {
   resetInfluxDbObject(); // Resets the influxDb object
 
-  int nFields = 6;
+  int nFields = 7;
+  int32_t values[nFields] = {
+      (int32_t)(temprature_sens_read() - 32) * 5 / 9,
+      (int32_t)get_wifi_strength(),
+      (int32_t)millis() / 1000,
+      (int32_t)get_analog_light_value(),
+      (int32_t)get_temperature(),
+      (int32_t)get_humidity(),
+      (int32_t)get_moisture()};
 
-  char *fields[nFields] = {
-    "internal_temp",
-    "wifi_strength",
-    "uptime",
-    "temperature",
-    "humidity",
-    "moisture"
-  };
+  setFieldsInObject(values);
 
-  int64_t values[nFields] = {
-    (int64_t)(temprature_sens_read() - 32) * 5 / 9,
-    (int64_t)get_wifi_strength(),
-    (int64_t)millis() / 1000,
-    (int64_t)get_temperature(),
-    (int64_t)get_humidity(),
-    (int64_t)get_moisture()
-  };
-
-  setFieldsInObject(nFields, fields, values);
+  char lightValueInContext[12];
+  convert_analog_light_value_to_string(lightValueInContext);
+  Serial << "Light value: " << lightValueInContext << endl;
 
   // Check Wi-Fi connection and reconnect if needed
   if (!checkWifiStillConnected())
