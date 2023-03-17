@@ -17,3 +17,12 @@ Wat ik heb geleerd:
 
 02-03 (SM-Technology - do):
 	Radiosignalen en deze onderscheppen met een ontvanger waarmee vervolgens deze signalen gemocked kunnen worden.
+	
+17-03 (SM-Business - vr):
+	TOM (Target Operating)-Model:
+	D.m.v. dit model is de impact van een innovatie te bepalen in alle bedrijfslagen.
+	Het is mogelijk dat sommige effecten nog niet (volledig) zijn uitgewerkt, zoals:
+		- Het onderzoeken van de AVG-privacy-wet of
+		- Personeel wat niet meer nodig is. Hiervoor moet uiteraard eerst een sociaal plan voor gemaakt worden.
+	Hier kun je al wel over nadenken en speculeren...
+	
