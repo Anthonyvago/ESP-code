@@ -1,4 +1,4 @@
 [submodule "website"]
 	path = website
-	url = git@github.com:minorsmart/smart-connection-Anthonyvago.git/master
-	branch = master
+	url = git@github.com:minorsmart/smart-connection-Anthonyvago.git
+	branch = main
